@@ -11,10 +11,20 @@ class Paper {
         
       World.add(world, this.body);
       }
+    
+    var paperpos=this.body.position; 
+
     display(){
       ellipseMode(RADIUS);
+        
+        push() 
+    translate(paperpos.x, paperpos.y);
+    rectMode(CENTER) 
+    strokeWeight(3); 
+    fill(255,0,255) 
+    ellipse(0,0,this.radius, this.radius); 
+    pop() 
   
-
   
       circle(this.body.position.x, this.body.position.y, this.radius);
     }
